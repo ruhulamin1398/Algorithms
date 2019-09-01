@@ -4,7 +4,7 @@ The smallest number in every segment
 log n
 
 output  :
-10 12 3 3 2 2 2 44 55 22 11 11 11 5
+10 3 3 3 2 2 2 44 55 22 11 11 11 5
 */
 
 
@@ -21,7 +21,7 @@ int main() {
     d.push_back(arr[0]);
 
     for( int i =1 ; i<len ; i++){
-            if(d.back()>arr[i])
+            while (d.size() !=0 && d.back()>arr[i])
                 d.pop_back();
             d.push_back(arr[i]);
             if(i<(segment-1))
